@@ -68,8 +68,10 @@
 
 
 
+localStorage.clear();
 
 const income = prompt("Enter your income");
+console.log(income);
 /* 1. Select HTML elements */
 const form = document.getElementById("expense-form");
 const descriptionInput = document.getElementById("description");
@@ -194,9 +196,9 @@ function calculateTotals() {
     // Balance = income - expenses
     const balance = totalIncome - totalExpenses;
 
-    // Update the page
+    // Update the page2
     balanceElement.textContent = "$" + balance.toFixed(2);
-    incomeElement.textContent = "$" + totalIncome.toFixed(2);
+    incomeElement.textContent = "$" + totalIncome;
     expensesElement.textContent = "$" + totalExpenses.toFixed(2);
 }
 
