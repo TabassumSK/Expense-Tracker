@@ -68,10 +68,6 @@
 
 
 
-localStorage.clear();
-
-const income = prompt("Enter your income");
-console.log(income);
 /* 1. Select HTML elements */
 const form = document.getElementById("expense-form");
 const descriptionInput = document.getElementById("description");
@@ -82,6 +78,14 @@ const balanceElement = document.getElementById("total-balance");
 const incomeElement = document.getElementById("total-income");
 const expensesElement = document.getElementById("total-expenses");
 const expenseList = document.getElementById("expense-list");
+
+const incomeButton = document.getElementById("inc-btn");
+
+const income = 0.00;
+incomeButton.addEventListener("click", () => {
+    income = prompt("Enter your income");
+});
+console.log(income);
 
 
 /* 2. Store entries */
