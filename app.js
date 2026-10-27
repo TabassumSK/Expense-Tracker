@@ -1,73 +1,3 @@
-
-// /* 1. Select HTML elements */
-// const form = document.getElementById("expense-form");
-// const descriptionInput = document.getElementById("description");
-// const amountInput = document.getElementById("amt");
-// const dateInput = document.getElementById("date");
-
-// const balanceElement = document.getElementById("total-balance");
-// const incomeElement = document.getElementById("total-income");
-// const expensesElement = document.getElementById("total-expenses");
-// const expenseList = document.getElementById("expense-list");
-
-
-// /* 2. Store entries */
-// let expenses = [];
-
-
-// /* 3. Handle form submission */
-// form.addEventListener("submit", function (event) {
-//     event.preventDefault();
-//     console.log(amountInput.value);
-
-//     // Read input values
-//     // Validate the amount
-//     // Create an expense object
-//     // Add the object to the expenses array
-//     expenses.push(amountInput.value);
-//     // Update the UI
-//     expensesElement.textContent = amountInput.value;
-   
-//     // Reset the form
-    
-// });
-
-
-// /* 4. Create an expense object */
-// // Example structure:
-// // {
-// //     id: Date.now(),
-// //     description: "Groceries",
-// //     amount: 500,
-// //     date: "2026-10-22"
-// // }
-
-
-// /* 5. Display entries */
-// function displayExpenses() {
-//     // Loop through expenses
-//     // Display each entry inside expenseList
-// }
-
-
-// /* 6. Calculate totals */
-// function calculateTotals() {
-//     // Use reduce() to calculate total expenses
-//     // Calculate income if you add income entries
-//     // Balance = income - expenses
-//     // Update the total elements
-// }
-
-
-// /* 7. Delete an entry */
-// function deleteExpense(id) {
-//     // Use filter() to remove the matching entry
-//     // Refresh the displayed list and totals
-// }
-
-
-
-
 /* 1. Select HTML elements */
 const form = document.getElementById("expense-form");
 const descriptionInput = document.getElementById("description");
@@ -81,11 +11,12 @@ const expenseList = document.getElementById("expense-list");
 
 const incomeButton = document.getElementById("inc-btn");
 
-const income = 0.00;
+let income = 0;
 incomeButton.addEventListener("click", () => {
-    income = prompt("Enter your income");
+    income = Number(prompt("Enter your income"));
+    calculateTotals();
 });
-console.log(income);
+// console.log(income);
 
 
 /* 2. Store entries */
